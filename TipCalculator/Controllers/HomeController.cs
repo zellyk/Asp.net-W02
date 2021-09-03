@@ -3,9 +3,12 @@ using TipCalculator.Models;
 
 namespace TipCalculator.Controllers
 {
-    //This class is used to take input from the view adn send it to be calculated in the model.
+    //This class is used to take input from the url and routes it through the
+    //model to load the dynamic webpage
+
     public class HomeController : Controller
     {
+        //HttpGet to initiate the function with data of 0's
         [HttpGet]
         public IActionResult Index()
         {
@@ -14,6 +17,7 @@ namespace TipCalculator.Controllers
             ViewBag.T3 = 0;
             return View();
         }
+        //httpPost will take the input and return the results from the model
         [HttpPost]
         public IActionResult Index(TipCalculatorModel model)
         {

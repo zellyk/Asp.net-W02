@@ -2,7 +2,9 @@
 
 namespace TipCalculator.Models
 {
-    //This model is used to calculate each tax bracket 
+    //This model is used to calculate each tax bracket and
+    //update the view to return the results
+
     public class TipCalculatorModel
     {
         [Required(ErrorMessage =
